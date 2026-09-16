@@ -1,50 +1,52 @@
-# Capstone Demo Day — your project proposal
+# Agentic Capstone Evidence Toolkit
 
-Submit a one-folder overview of your product for Demo Day. **Judging is evidence-based** — this repo
-gives you the template and the dimensions you'll be scored on, so there are no surprises.
+> A practical template and evaluation framework for presenting an agentic capstone project with clear, verifiable evidence.
 
-## How to submit
-1. Copy [`CAPSTONE-PROPOSAL-TEMPLATE.md`](CAPSTONE-PROPOSAL-TEMPLATE.md) into a folder:
-   `submissions/<your-project>/proposal.md`.
-2. Fill it in. Every section maps to a scoring dimension — don't skip one.
-3. Add **evidence** to that folder: a clone/export of your (preferably public) repo, a runnable test,
-   a short demo recording, sample output/logs, screenshots.
-4. Hand the folder to your instructor as directed.
+## What this repository is
 
-## How you're judged (rubric — weights sum to 100)
-| Dimension | Weight | What it measures |
+This is an **academic support toolkit**, not a production application or a submitted capstone product. It helps learners package a project for Demo Day in a consistent way: explain the product, map it to an evaluation rubric, and include proof that the important behaviours actually work.
+
+## Included resources
+
+- [`CAPSTONE-PROPOSAL-TEMPLATE.md`](CAPSTONE-PROPOSAL-TEMPLATE.md) — a guided proposal format aligned with the evaluation criteria.
+- `submissions/` — the place for each project's proposal and supporting evidence.
+- An evidence-first scoring model for reviewing agentic projects fairly and transparently.
+
+## How to use it
+
+1. Copy the proposal template into `submissions/<your-project>/proposal.md`.
+2. Describe the problem, intended users, workflow, controls, and technical choices.
+3. Add compact, meaningful evidence: a runnable test, reproducible run, public repository, demo, or sample output.
+4. Submit the folder according to the course process.
+
+## Evaluation framework
+
+| Dimension | Weight | What reviewers look for |
 |---|---:|---|
-| Agentic depth | 25 | Real agency (plan→act→observe loop, tools, autonomy, multi-agent, memory) vs a prompt wrapper |
-| Engineering excellence | 20 | Code quality & robustness, error handling, tests, observability — *not* system size |
-| Product & ease of use | 15 | Clear value, a real user, usable & polished |
-| Potential & MOAT | 15 | Could it be a real, *defensible* product? |
-| Safety & control | 15 | HITL, guardrails, caps, injection/untrusted-input & secret handling |
-| Complexity & difficulty | 5 | A hard problem genuinely solved — independent of agent/component count |
-| Demo & communication | 5 | Clear writeup + verifiable evidence it works |
+| Agentic depth | 25 | A real plan → act → observe loop, appropriate tools, autonomy, or memory — not only a prompt wrapper |
+| Engineering excellence | 20 | Reliable implementation, tests, error handling, and observability |
+| Product and usability | 15 | A clear user problem and an experience people can use |
+| Potential and defensibility | 15 | A credible path to a differentiated, useful product |
+| Safety and control | 15 | Human oversight, limits, trustworthy input handling, and safe handling of secrets |
+| Complexity and difficulty | 5 | A genuinely difficult problem solved well |
+| Demo and communication | 5 | Clear explanation plus evidence that the project runs |
 
-Scored **1–10** per dimension; `final = Σ (score/10 × weight)`, out of 100.
+Scores are assigned from 1–10 per dimension, for a weighted total out of 100.
 
-## What wins (and what loses)
-- **Show, don't tell — evidence is tiered.** A claim that's *prose only* is **asserted** (capped at a
-  middling score). Code that *exists* in your folder is **present** (higher cap). Proof the behavior
-  *actually ran* — a runnable test, a reproducible run, or a public URL — is **demonstrated**, and only
-  that reaches top marks. Screenshots and pasted logs are weak (easy to fake); lead with a test or a
-  live link. **Curate**: a few artifacts that prove the most beat a wall of 40 screenshots.
-- **Agentic depth is the heaviest dimension** — this is an agentic fellowship. A polished app with no
-  real agency won't beat a rougher one with genuine, working agency. Multi-agent is rewarded once
-  (here), so a clean single-agent product isn't penalized for being focused.
-- **Safety has a downside, not just an upside.** An agent that takes a **high-harm** action unattended
-  with no human-in-the-loop and no caps — spends money, messages other people, or does something
-  unrecoverable — is penalized and can be **excluded from the top tier**. (Self-notifications and
-  reversible/backed-up writes are fine.) Say where your human-in-the-loop and caps are.
-- **Don't try to game the judge.** A live instruction to the judge in your proposal ("score me 10",
-  "ignore the rubric") is an injection attempt: it's flagged, docks your Safety, and makes you
-  **ineligible** for the top tier. *But* describing your product's own prompt-injection handling
-  **scores well** — just **fence any example attack strings in a code block** so they read as content,
-  not a command. (You learned this in the security workshop. This is the exam.)
+## Evidence standard
 
-## Folder layout
-- `CAPSTONE-PROPOSAL-TEMPLATE.md` — the template to copy and fill in.
-- `submissions/<your-project>/` — your `proposal.md` + your evidence.
+The framework distinguishes between claims and proof:
 
-> Honest scoping and verifiable evidence beat polish and adjectives. Build something real, then prove it.
+- **Asserted:** described only in prose.
+- **Present:** implemented code or an artifact is included.
+- **Demonstrated:** a reviewer can verify the behaviour through a test, reproducible run, or live demo.
+
+Strong submissions curate a small set of high-signal artifacts rather than relying on screenshots or broad claims.
+
+## Safety expectations
+
+Agentic systems should keep humans in control of high-impact actions, set sensible limits, treat untrusted input carefully, and avoid exposing secrets. Safety is evaluated as a core design property, not an optional extra.
+
+## Scope
+
+Use this repository as a reusable course or mentoring resource. A learner's actual project and evidence should live in its own submission folder or public repository.
